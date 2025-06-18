@@ -32,7 +32,14 @@ export default function RootLayout({
           <h1>Fake Store</h1>
         </header>
         <main>{children}</main>
-        <footer>
+        <footer
+          style={{
+            textAlign: "center",
+            padding: "1rem",
+            marginTop: "2rem",
+            borderTop: "1px solid #ccc",
+          }}
+        >
           <p>&copy; 2025 FakeStore</p>
         </footer>
       </body>
