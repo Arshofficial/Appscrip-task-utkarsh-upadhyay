@@ -1,13 +1,20 @@
-import React from "react";
+"use client";
+import React, { Dispatch, SetStateAction } from "react";
 import FilterToggle from "./filter-toggle";
-import "./action-bar.css";
 import QuickFilters from "./quick-filters";
+import "./action-bar.css";
+
+type ActionBarProps = {
+  products: any[];
+  drawerOpen: boolean;
+  setDrawerOpen: Dispatch<SetStateAction<boolean>>;
+};
 
 const ActionBar = ({
   products = [],
-  drawerOpen = false,
-  setDrawerOpen = {},
-}) => {
+  drawerOpen,
+  setDrawerOpen,
+}: ActionBarProps) => {
   return (
     <div className="actionbar-container">
       <div className="left-side">
