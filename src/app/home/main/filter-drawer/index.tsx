@@ -2,12 +2,18 @@
 import React from "react";
 import "./filter-drawer.css";
 
+type FilterDrawerProps = {
+  categories: string[];
+  selectedCategories: string[];
+  setSelectedCategories: React.Dispatch<React.SetStateAction<string[]>>;
+};
+
 const FilterDrawer = ({
   categories = [],
   selectedCategories,
   setSelectedCategories,
-}) => {
-  const toggleCategory = (category) => {
+}: FilterDrawerProps) => {
+  const toggleCategory = (category: string) => {
     if (category === "All") {
       setSelectedCategories(["All"]);
     } else {
