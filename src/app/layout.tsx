@@ -1,3 +1,8 @@
+import Footer from "./commons/footer";
+import Header from "./commons/header";
+import NavBar from "./top-navbar";
+import Banner from "./banner";
+
 export const metadata = {
   title: "Fake Store | Appscrip Task by Utkarsh",
   description:
@@ -28,20 +33,12 @@ export default function RootLayout({
       </head>
 
       <body>
-        <header style={{ textAlign: "center", padding: "1rem" }}>
-          <h1>Fake Store</h1>
-        </header>
-        <main>{children}</main>
-        <footer
-          style={{
-            textAlign: "center",
-            padding: "1rem",
-            marginTop: "2rem",
-            borderTop: "1px solid #ccc",
-          }}
-        >
-          <p>&copy; 2025 FakeStore</p>
-        </footer>
+        <Header />
+        <NavBar />
+        <Banner />
+        <main style={{ padding: "2rem" }}>{children}</main>
+
+        <Footer />
       </body>
     </html>
   );

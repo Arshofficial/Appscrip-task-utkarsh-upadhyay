@@ -1,0 +1,18 @@
+.actionbar-container {
+  display: flex;
+  justify-content: space-between;
+}
+.left-side {
+  display: flex;
+}
+.right-side {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .products-count {
+    display: none;
+    max-width: 0;
+    max-height: 0;
+  }
+}

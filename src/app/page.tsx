@@ -1,6 +1,6 @@
 import React from "react";
 import "./globals.css";
-import Image from "next/image";
+import Main from "./home/main";
 
 type Product = {
   id: number;
@@ -22,26 +22,7 @@ export default async function Home() {
 
   return (
     <>
-      <h2 style={{ marginBottom: "1rem" }}>Featured Products</h2>
-      <div className="product-grid">
-        {products?.map((product) => (
-          <article className="product-card" key={product.id}>
-            <Image
-              src={product.image}
-              alt={product.title}
-              width={200}
-              height={200}
-              className="product-image"
-              style={{ objectFit: "contain" }}
-            />
-
-            <div className="product-info">
-              <h3>{product.title}</h3>
-              <p>$ {product.price}</p>
-            </div>
-          </article>
-        ))}
-      </div>
+      <Main products={products} />
     </>
   );
 }

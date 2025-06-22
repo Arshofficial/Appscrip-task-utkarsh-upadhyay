@@ -1,0 +1,38 @@
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+  font-weight: bold;
+  flex-wrap: wrap;
+}
+
+.nav-tabs a {
+  text-decoration: none;
+  color: #111;
+  letter-spacing: 0.5px;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.nav-tabs a:hover {
+  color: #f46b8d;
+}
+
+@media (max-width: 768px) {
+  .hide-on-mobile {
+    display: none;
+  }
+
+  .nav-tabs {
+    gap: 1.5rem;
+    padding: 0.8rem 0;
+  }
+
+  .shop-tab {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}
