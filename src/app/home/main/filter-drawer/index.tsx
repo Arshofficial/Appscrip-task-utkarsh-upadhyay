@@ -6,8 +6,6 @@ const FilterDrawer = ({
   categories = [],
   selectedCategories,
   setSelectedCategories,
-  drawerOpen,
-  setDrawerOpen,
 }) => {
   const toggleCategory = (category) => {
     if (category === "All") {

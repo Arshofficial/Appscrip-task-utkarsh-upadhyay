@@ -1,5 +1,4 @@
-"use Client";
-import React, { useState } from "react";
+import React from "react";
 import FilterToggle from "./filter-toggle";
 import "./action-bar.css";
 import QuickFilters from "./quick-filters";
