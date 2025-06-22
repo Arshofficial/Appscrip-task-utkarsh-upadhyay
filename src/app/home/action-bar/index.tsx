@@ -4,8 +4,16 @@ import FilterToggle from "./filter-toggle";
 import QuickFilters from "./quick-filters";
 import "./action-bar.css";
 
+type Product = {
+  id: number;
+  title: string;
+  price: number;
+  category: string;
+  image?: string;
+};
+
 type ActionBarProps = {
-  products: any[];
+  products: Product[];
   drawerOpen: boolean;
   setDrawerOpen: Dispatch<SetStateAction<boolean>>;
 };

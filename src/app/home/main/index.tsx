@@ -55,8 +55,6 @@ const Main = ({ products = [] }: MainProps) => {
         {drawerOpen && (
           <div className="drawer-container">
             <FilterDrawer
-              drawerOpen={drawerOpen}
-              setDrawerOpen={setDrawerOpen}
               categories={categories}
               selectedCategories={selectedCategories}
               setSelectedCategories={setSelectedCategories}
