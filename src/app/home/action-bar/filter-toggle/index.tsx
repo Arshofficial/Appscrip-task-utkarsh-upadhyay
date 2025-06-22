@@ -1,7 +1,7 @@
 import React from "react";
 import "./filter-toggle.css";
 
-const FilterToggle = ({ drawerOpen = false, setDrawerOpen = {} }) => {
+const FilterToggle = ({ drawerOpen = false, setDrawerOpen }) => {
   return (
     <>
       <span
