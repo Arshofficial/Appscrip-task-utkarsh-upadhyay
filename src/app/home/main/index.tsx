@@ -5,17 +5,29 @@ import ProductGrid from "./product-grid";
 import FilterDrawer from "./filter-drawer";
 import "./main.css";
 
-const Main = ({ products = [] }) => {
+type Product = {
+  id: number;
+  title: string;
+  price: number;
+  category: string;
+  image?: string;
+};
+
+type MainProps = {
+  products: Product[];
+};
+
+const Main = ({ products = [] }: MainProps) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [categories, setCategories] = useState<string[]>([]);
   const [selectedCategories, setSelectedCategories] = useState<string[]>([
     "All",
   ]);
-  const [filtered, setFiltered] = useState(products);
+  const [filtered, setFiltered] = useState<Product[]>(products);
 
   useEffect(() => {
     const uniqueCategories = [
-      ...new Set(products.map((product) => product?.category)),
+      ...new Set(products.map((product) => product.category)),
     ];
     setCategories(uniqueCategories);
   }, [products]);
@@ -26,7 +38,7 @@ const Main = ({ products = [] }) => {
     } else {
       setFiltered(
         products.filter((product) =>
-          selectedCategories.includes(product?.category)
+          selectedCategories.includes(product.category)
         )
       );
     }
